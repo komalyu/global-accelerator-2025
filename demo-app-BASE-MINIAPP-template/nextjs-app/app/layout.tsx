@@ -1,13 +1,16 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { Providers } from './providers';
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
+import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = localFont({
+  src: "./InterVariable.ttf",
+});
 
 export const metadata: Metadata = {
-  title: 'Vibe Trading AI - AI-Powered Trading Signals',
-  description: 'AI-powered trading signals for Base chain tokens. Get insights, track performance, and trade smarter.',
+  title: "Vibe Trading AI - AI-Powered Trading Signals",
+  description:
+    "AI-powered trading signals for Base chain tokens. Get insights, track performance, and trade smarter.",
 };
 
 export default function RootLayout({

@@ -15,6 +15,7 @@ async function initDatabase() {
     
     // Drop existing tables to start fresh
     console.log('🧹 Dropping existing tables...');
+    await client.query('DROP TABLE IF EXISTS tokens CASCADE');
     await client.query('DROP TABLE IF EXISTS token_mentions CASCADE');
     await client.query('DROP TABLE IF EXISTS farcaster_casts CASCADE');
     await client.query('DROP TABLE IF EXISTS price_history CASCADE');
